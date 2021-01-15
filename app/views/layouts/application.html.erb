@@ -6,14 +6,32 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
+<script>var STONLY_WID = "df9078d1-56d2-11eb-accc-0ad3430e55ea";</script>
+<script>
+!function(s,t,o,n,l,y,w,g){s.StonlyWidget||((w=s.StonlyWidget=function(){
+w._api?w._api.apply(w,arguments):w.queue.push(arguments)}).queue=[],(y=t.createElement(o)).async=!0,
+(g=new XMLHttpRequest).open("GET",n+"version?v="+Date.now(),!0),g.onreadystatechange=function(){
+4===g.readyState&&(y.src=n+"stonly-widget.js?v="+(200===g.status?g.responseText:Date.now()),
+(l=t.getElementsByTagName(o)[0]).parentNode.insertBefore(y,l))},g.send())
+}(window,document,"script","https://stonly.com/js/widget/v2/");
+</script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render "shared/header" %>
-
+      <!-- stonly-widget - copy into the head -->
+<script>var STONLY_WID = "df9078d1-56d2-11eb-accc-0ad3430e55ea";</script>
+<script>
+!function(s,t,o,n,l,y,w,g){s.StonlyWidget||((w=s.StonlyWidget=function(){
+w._api?w._api.apply(w,arguments):w.queue.push(arguments)}).queue=[],(y=t.createElement(o)).async=!0,
+(g=new XMLHttpRequest).open("GET",n+"version?v="+Date.now(),!0),g.onreadystatechange=function(){
+4===g.readyState&&(y.src=n+"stonly-widget.js?v="+(200===g.status?g.responseText:Date.now()),
+(l=t.getElementsByTagName(o)[0]).parentNode.insertBefore(y,l))},g.send())
+}(window,document,"script","https://stonly.com/js/widget/v2/");
+</script>
+<!-- stonly-widget - copy into the head -->
     <% if notice.present? %>
       <p class="notification is-link is-light"><%= notice %></p>
     <% end %>
@@ -25,5 +43,17 @@
     <div class="container">
       <%= yield %>
     </div>
+    <!--Eyelet snippet starts-->
+<script type="text/javascript">
+  var eyelet_wdgt = { 'id':'6000efabaa10ad0b91ffe420'};
+  (function(d) {
+    var n = d.getElementsByTagName('script')[0],
+    s = d.createElement('script');
+    s.async = true;
+    s.src = '//widget.eyelet.io/code.js';
+    n.parentNode.insertBefore(s, n);
+  })(document);
+</script> 
+<!--Eyelet snippet ends-->
   </body>
 </html>
